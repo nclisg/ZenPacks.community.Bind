@@ -1,6 +1,6 @@
 # ZenPacks.community.Bind
 
-This zenpack uses RNDC to generate statics for bind which is then parsed via a python script ran via a command data source.
+This zenpack uses rndc to generate statics for bind.  The stats are parsed via a python script executed from a command data source.
 
 Setup steps:
 
