@@ -1,8 +1,8 @@
 # ZenPacks.community.Bind
 
-This zenpack uses RNDC to generate statics for bind which it them users a local script ran via command datasource to process the results and return them to zenoss. 
+This zenpack uses RNDC to generate statics for bind which is then parsed via a python script ran via a command data source.
 
-You need to do the following: 
+Setup steps:
 
 - Configure the server for rndc 
     (https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Deployment_Guide/s2-bind-rndc.html)
