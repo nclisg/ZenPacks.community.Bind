@@ -1,6 +1,7 @@
 #!/usr/bin/env python 
 
 import sys
+import datetime 
 
 if len(sys.argv) < 2:
     print "CRITICAL - file not found"
@@ -97,19 +98,22 @@ serverstats = {
             'update_requests_rejected':0
               }
 
+start = 0
+
 for index, line in enumerate(f):
-    if index == 0:
-        if not line.startswith("+++ Statistics Dump +++"):
-            print "invalid file"
-            break
-        else:
-            continue
+    if line.startswith("+++ Statistics Dump +++"):
+        start = index     
+
+f.seek(start + 1)
+
+for index, line in enumerate(f):
 
     if line.startswith("[View"):
         continue
 
     if line.startswith("++ Zone Maintenance Statistics ++"):
-        break
+        datatype = 4
+        continue
 
     if line.startswith("++ Incoming Queries ++"):
         datatype = 1
@@ -144,5 +148,10 @@ for label, data in outgoing.iteritems():
 
 for label, data in serverstats.iteritems():
     sys.stdout.write( "server." + label +"=" + str(data) + " ")
+
+
+
+
+
 
 
