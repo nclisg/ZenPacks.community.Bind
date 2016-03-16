@@ -3062,9 +3062,6 @@ False
 <property type="int" id="sequence" mode="w" >
 0
 </property>
-<tomany id='instances'>
-<link objid='/zport/dmd/Devices/Server/Linux/devices/dns5/os/processes/zport_dmd_Processes_Bind_osProcessClasses_named_5d316e36d4bf942f340416d7282f41f7'/>
-</tomany>
 </object>
 </tomanycont>
 </object>
