@@ -104,7 +104,7 @@ for index, line in enumerate(f):
     if line.startswith("+++ Statistics Dump +++"):
         start = index     
 
-f.seek(start + 1)
+f.seek(start)
 
 for index, line in enumerate(f):
 
